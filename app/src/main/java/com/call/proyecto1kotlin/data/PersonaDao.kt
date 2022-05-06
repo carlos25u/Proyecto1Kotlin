@@ -12,9 +12,9 @@ interface PersonaDao {
     @Delete
     suspend fun Eliminar(persona: Persona)
 
-    @Query("SELECT * FROM Personas WHERE PersonaId = PersonaId")
-    fun Buscar(personaId:Int):Persona
+    /*@Query("SELECT * FROM Personas WHERE PersonaId = PersonaId")
+    fun Buscar(personaId:Int): Flow<Persona>
 
     @Query("SELECT * FROM Personas ORDER BY PersonaId")
-    fun GetLista():List<Persona>
+    fun GetLista(): Flow<List<Persona>>*/
 }
