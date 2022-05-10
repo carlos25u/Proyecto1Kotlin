@@ -6,55 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/NombresTextInput"
+    <fragment
+        android:id="@+id/my_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="@dimen/margin16"
-        android:layout_marginTop="@dimen/margin16"
-        android:layout_marginEnd="@dimen/margin16"
-        android:hint="@string/hint_Nombres">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/NombresEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/BalancesTextInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="90dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="@dimen/margin16"
-        android:layout_marginTop="@dimen/margin16"
-        android:layout_marginEnd="@dimen/margin16"
-        android:hint="@string/hint_Balances">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/BalancesEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/guardarButton"
-        android:layout_marginVertical="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin16"
-        android:layout_marginTop="@dimen/margin16"
-        android:layout_marginEnd="@dimen/margin16"
-        android:text="@string/guardar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BalancesTextInput" />
-
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navgraph" />
 </androidx.constraintlayout.widget.ConstraintLayout>

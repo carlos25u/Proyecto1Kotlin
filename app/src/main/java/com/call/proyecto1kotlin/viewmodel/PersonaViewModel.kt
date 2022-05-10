@@ -1,21 +1,24 @@
 package com.call.proyecto1kotlin.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import android.app.Application
+import androidx.lifecycle.*
 import com.call.proyecto1kotlin.data.PersonaDao
-import com.call.proyecto1kotlin.model.Persona
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
 import javax.inject.Inject
+import com.call.proyecto1kotlin.model.Persona
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.launch
 
 @HiltViewModel
 class PersonaViewModel @Inject constructor(
     val personaDao: PersonaDao
 ) : ViewModel(){
+
+    val personas : Flow<List<Persona>>
+        get() =  personaDao.GetLista()
+
     private val _guardado = MutableLiveData(false)
-    val guardado:LiveData<Boolean> = _guardado
+    val guardado: LiveData<Boolean> = _guardado
 
     fun guardar(persona: Persona){
         viewModelScope.launch {

@@ -18,22 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-        binding.guardarButton.setOnClickListener{
-            viewModel.guardar(Persona(
-                0,
-                binding.NombresEditText.text.toString(),
-                binding.BalancesEditText.floatValue()
-            ))
-        }
-
-        viewModel.guardado.observe(this){
-            if(it){
-                Snackbar.make(binding.BalancesEditText, "Guardo", Snackbar.LENGTH_LONG).show()
-            }
-        }
     }
-
-    fun TextInputEditText.floatValue() = text.toString().toFloatOrNull() ?: 0.0f
 }
