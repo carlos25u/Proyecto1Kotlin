@@ -32,7 +32,7 @@ class PersonasFragment : Fragment() {
     ): View? {
         binding = PersonasFragmentBinding.inflate(inflater, container, false)
 
-        //LlenarCampos()
+        LlenarCampos()
 
         binding.guardarButton.setOnClickListener {
             viewModel.guardar(
@@ -55,13 +55,13 @@ class PersonasFragment : Fragment() {
     }
 
     fun LlenarCampos(){
-       //val persona: Persona? = args.persona
+       val persona: Persona? = args.persona
 
-        //persona?.let {
-          //  personaId = it.PersonaId
-          //  binding.NombresEditText.setText(it.Nombres)
-          //  binding.BalancesEditText.setText(it.Balance.toString())
-       // }
+        persona?.let {
+            personaId = it.PersonaId
+            binding.NombresEditText.setText(it.Nombres)
+            binding.BalancesEditText.setText(it.Balance.toString())
+        }
     }
 
     fun TextInputEditText.floatValue() = text.toString().toFloatOrNull() ?: 0.0f

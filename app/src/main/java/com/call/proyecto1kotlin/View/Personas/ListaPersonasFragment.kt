@@ -47,6 +47,7 @@ class ListaPersonasFragment: Fragment() {
     }
 
     fun openPersonasFragment(persona:Persona?=null)  {
-
+        val action = ListaPersonasFragmentDirections.actionToPersonasFragment(persona)
+        findNavController().navigate(action)
     }
 }
