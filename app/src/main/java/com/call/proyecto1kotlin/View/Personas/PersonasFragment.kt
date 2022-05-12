@@ -55,7 +55,7 @@ class PersonasFragment : Fragment() {
     }
 
     fun LlenarCampos(){
-       val persona: Persona? = args.persona
+       val persona: Persona? = args.personas
 
         persona?.let {
             personaId = it.PersonaId

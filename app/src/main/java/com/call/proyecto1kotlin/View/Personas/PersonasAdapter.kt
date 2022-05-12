@@ -6,6 +6,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.call.proyecto1kotlin.R
 import com.call.proyecto1kotlin.databinding.RowPersonaBinding
 import com.call.proyecto1kotlin.model.Persona
 

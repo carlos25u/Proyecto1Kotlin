@@ -22,9 +22,8 @@
         tools:layout="@layout/personas_fragment" >
         <argument
             android:name="personas"
-            app:argType="com.call.proyecto1kotlin.model.Persona."
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:argType="com.call.proyecto1kotlin.model.Persona"
+            app:nullable="true" />
     </fragment>
 
 </navigation>
