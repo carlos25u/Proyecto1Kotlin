@@ -39,7 +39,10 @@ class PersonasFragment : Fragment() {
                 Persona(
                     personaId,
                     binding.NombresEditText.text.toString(),
-                    binding.BalancesEditText.floatValue()
+                    binding.EmailEditText.text.toString(),
+                    binding.BalancesEditText.floatValue(),
+
+
                 )
             )
         }
@@ -60,6 +63,7 @@ class PersonasFragment : Fragment() {
         persona?.let {
             personaId = it.PersonaId
             binding.NombresEditText.setText(it.Nombres)
+            binding.EmailEditText.setText(it.Email)
             binding.BalancesEditText.setText(it.Balance.toString())
         }
     }

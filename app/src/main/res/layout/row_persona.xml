@@ -37,8 +37,19 @@
         android:layout_height="wrap_content"
         tools:text="Nombres"
         app:layout_constraintBottom_toBottomOf="@+id/personaIdTextView"
-        app:layout_constraintEnd_toStartOf="@+id/BalanceTextView"
+        app:layout_constraintEnd_toStartOf="@+id/EmailTextView"
         app:layout_constraintStart_toEndOf="@+id/personaIdTextView"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/EmailTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Email"
+        app:layout_constraintBottom_toBottomOf="@+id/nombresTextView"
+        app:layout_constraintEnd_toStartOf="@+id/BalanceTextView"
+        app:layout_constraintStart_toEndOf="@+id/nombresTextView"
         android:textColor="@color/design_default_color_on_secondary"
         app:layout_constraintTop_toTopOf="parent" />
 

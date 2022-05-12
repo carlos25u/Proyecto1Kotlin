@@ -11,6 +11,8 @@ data class Persona (
     @PrimaryKey(autoGenerate = true)
     val PersonaId:Int,
     val Nombres:String,
+    val Email:String,
     val Balance:Float
+
         ): Parcelable
 

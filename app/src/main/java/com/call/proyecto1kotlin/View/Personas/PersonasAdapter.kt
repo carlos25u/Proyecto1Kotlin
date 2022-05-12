@@ -31,6 +31,7 @@ class PersonasAdapter(
         fun bind(item: Persona) {
             binding.personaIdTextView.text = item.PersonaId.toString()
             binding.nombresTextView.text = item.Nombres
+            binding.EmailTextView.text = item.Email
             binding.BalanceTextView.text = item.Balance.toString();
 
             binding.root.setOnClickListener {
