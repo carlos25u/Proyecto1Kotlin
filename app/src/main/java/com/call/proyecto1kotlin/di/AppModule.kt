@@ -2,6 +2,7 @@ package com.call.proyecto1kotlin.di
 
 import android.content.Context
 import androidx.room.Room
+import com.call.proyecto1kotlin.data.OcupacionDao
 import com.call.proyecto1kotlin.data.PersonaDao
 import com.call.proyecto1kotlin.data.PersonasDb
 import dagger.Module
@@ -29,5 +30,10 @@ object AppModule {
     @Provides
     fun ProvidePersonaDao(personasDb: PersonasDb):PersonaDao{
         return personasDb.personaDao
+    }
+
+    @Provides
+    fun ProvideOcupacionDao(personasDb: PersonasDb):OcupacionDao{
+        return personasDb.ocupacionDao
     }
 }
