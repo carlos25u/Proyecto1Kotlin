@@ -63,6 +63,17 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Spinner
+        android:id="@+id/ocupacionSpinner"
+        android:layout_width="366dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/guardarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_marginTop="@dimen/margin16"
+        android:layout_marginEnd="@dimen/margin16"
+        app:layout_constraintTop_toBottomOf="@+id/BalancesTextInput" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/guardarButton"
         android:layout_width="wrap_content"
@@ -74,6 +85,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BalancesTextInput"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.20" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
