@@ -14,6 +14,7 @@ interface PersonaDao {
           """)
 
     fun Buscar(personaId: Int): Flow<Persona>
+
     @Delete
     suspend fun Eliminar(persona: Persona)
 

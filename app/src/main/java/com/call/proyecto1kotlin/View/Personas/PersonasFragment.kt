@@ -44,8 +44,17 @@ class PersonasFragment : Fragment() {
                     binding.NombresEditText.text.toString(),
                     binding.EmailEditText.text.toString(),
                     binding.BalancesEditText.floatValue(),
+                )
+            )
+        }
 
-
+        binding.eliminarButton.setOnClickListener{
+            viewModel.eliminar(
+                Persona(
+                    personaId,
+                    binding.NombresEditText.text.toString(),
+                    binding.EmailEditText.text.toString(),
+                    binding.BalancesEditText.floatValue(),
                 )
             )
         }
